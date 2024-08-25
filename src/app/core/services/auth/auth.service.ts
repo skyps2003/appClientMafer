@@ -2,13 +2,15 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
+import { environment } from '../../../../environments/environment'; // Adjust the path if necessary
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private baseUrl = "http://127.0.0.1:8000/api/client";
+  private baseUrl = environment.API_URL + "client"; // Use environment API URL
+
   private getAuthHeaders(): HttpHeaders {
     const token = this.getToken();
     return new HttpHeaders({
@@ -16,6 +18,7 @@ export class AuthService {
       'Authorization': token ? `Bearer ${token}` : ''
     });
   }
+  
   private tokenKey = 'authToken';
   private currentUser: any | null = null; 
 
