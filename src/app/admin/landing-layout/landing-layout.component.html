@@ -1,0 +1,310 @@
+<div class="leading-normal tracking-normal text-white bg-gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+  <app-header-landing></app-header-landing>
+  
+  <div class="containeer-fluid py-5 hero-header">
+      <div class="row g-5 align-items-center">
+          <div class="col-md-12 col-lg-7">
+              <strong><h4 class="mb-3 text-warning">Bienvidos a Agroindustrias Mafer</h4></strong>
+              <h1 class="mb-5 display-3 text-danger">Tu Tienda de Yogures, Máquinas y Suministros</h1>
+              <div class="position-relative mx-auto">
+                  <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search">
+                  <button type="submit" class="btn btn-danger border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;">Buscar Producto</button>
+              </div>
+          </div>
+          <div class="col-md-12 col-lg-5">
+              <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+                  <div class="carousel-inner" role="listbox">
+                      <div class="carousel-item active rounded text-center">
+                          <img src="/assets/images/yogures.jpg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                          
+                          <button #navaction routerLink="auth" class="text-center mx-auto lg:mx-0 hover:underline bg-warning text-gray-800 font-bold rounded-full lg:mt-0 py-2 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            Yogures
+                          </button>
+                      </div>
+                      <div class="carousel-item rounded text-center">
+                          <img src="/assets/images/maquinas.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                          <button #navaction routerLink="auth" class="text-center mx-auto lg:mx-0 hover:underline bg-warning text-gray-800 font-bold rounded-full lg:mt-0 py-2 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            Maquinarias
+                          </button>
+                      </div>
+                      <div class="carousel-item rounded text-center">
+                          <img src="/assets/images/insumos.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                          <button #navaction routerLink="auth" class="text-center mx-auto lg:mx-0 hover:underline bg-warning text-gray-800 font-bold rounded-full lg:mt-0 py-2 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            Suministros
+                          </button>
+                      </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="pt-24">
+      <div class="container-fluid px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+          <!-- Featurs Section Start -->
+          <div class="container mx-auto text-center py-6 mb-12">
+              <div class="container py-5">
+                  <div class="row g-4">
+                      <div class="col-md-6 col-lg-3">
+                          <div class="featurs-item text-center rounded bg-light p-4">
+                              <div class="featurs-icon btn-square  mb-5 mx-auto">
+                                  <i class="fas fa-car-side fa-3x text-success"></i>
+                              </div>
+                              <div class="featurs-content text-center text-dark">
+                                  <h5>Free Shipping</h5>
+                                  <p class="mb-0">Free on order over $300</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                          <div class="featurs-item text-center rounded bg-light p-4">
+                              <div class="featurs-icon btn-square  mb-5 mx-auto">
+                                  <i class="fas fa-user-shield fa-3x text-danger"></i>
+                              </div>
+                              <div class="featurs-content text-center text-dark">
+                                  <h5>Security Payment</h5>
+                                  <p class="mb-0">100% security payment</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                          <div class="featurs-item text-center rounded bg-light p-4">
+                              <div class="featurs-icon btn-square  mb-5 mx-auto">
+                                  <i class="fas fa-exchange-alt fa-3x text-success"></i>
+                              </div>
+                              <div class="featurs-content text-center text-dark">
+                                  <h5>30 Day Return</h5>
+                                  <p class="mb-0">30 day money guarantee</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                          <div class="featurs-item text-center rounded bg-light p-4">
+                              <div class="featurs-icon btn-square  mb-5 mx-auto">
+                                  <i class="fa fa-phone-alt fa-3x text-danger"></i>
+                              </div>
+                              <div class="featurs-content text-center text-dark">
+                                  <h5>24/7 Support</h5>
+                                  <p class="mb-0">Support every time fast</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Featurs Section End -->
+      </div>  
+  </div>  
+ 
+
+
+  
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  
+  @if(isLoading) {
+    <app-loader></app-loader>
+}
+@if(!isLoading) {
+    <div class="container mx-auto p-4">
+        <div class="tab-class text-center mb-4">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-4 text-start">
+                  <h1 class="mb-5 display-3 text-danger">Selecciona tu categoria preferida</h1>
+                </div>
+                <div class="col-lg-8 text-end">
+                    <ul class="nav nav-pills d-inline-flex text-center">
+                        <li class="nav-item " *ngFor="let category of categories">
+                            <a
+                                class="d-flex m-2 py-2 bg-danger-subtle rounded-pill"
+                                [class.active]="selectedCategory === category.name.toLowerCase()"
+                                (click)="filterProductsByCategory(category.name.toLowerCase())"
+                                href="javascript:void(0)"
+                            >
+                                <span class="text-success" style="width: 130px;">{{ category.name }}</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="d-flex m-2 py-2 bg-light rounded-pill"
+                                [class.active]="selectedCategory === 'all'"
+                                (click)="filterProductsByCategory('all')"
+                                href="javascript:void(0)"
+                            >
+                                <span class="text-dark" style="width: 130px;">Todos los productos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-8 gap-4">
+            <div class="md:col-span-8 p-4">
+                <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    @for (product of filteredProducts; track $index) {
+                        <app-card
+                            [inventory]="product.id"
+                            [image]="product.product.img"
+                            [price]="product.product.price"
+                            [name]="product.product.name"
+                            [description]="product.product.description"
+                            [stock]="product.stock"
+                            (openModal)="openModal(product)"
+                        ></app-card>
+                    }
+                </div>
+            </div>
+        </div>
+
+        @if (selectedProduct) {
+            <app-product-modal [product]="selectedProduct" (close)="closeModal()"></app-product-modal>
+        }
+    </div>
+}
+
+  
+  <!-- Features Start -->
+<div class="container-fluid service py-5">
+    
+    <div class="container py-5">
+        <div class="row g-4 justify-content-center">
+            <h1 class="mb-5 display-3 text-success">Productos Tendencia Mafer </h1>
+            <div class="col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="service-item rounded border border-secondary">
+                        <img src="./assets/images/mermelada.jpg" class="img-fluid rounded-top w-100" alt="Fresh Apples">
+                        <div class="px-4 rounded-bottom">
+                            <div class="service-content text-center p-4 rounded">
+                                <h5 class="text-white">NUEVA LINEA DE MERMELADAS</h5>
+                                <h3 class="mb-0 text-light">100% NATURALES</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="service-item rounded border border-dark">
+                        <img src="./assets/images/yogures.jpg" class="img-fluid rounded-top w-100" alt="Tasty Fruits">
+                        <div class="px-4 rounded-bottom">
+                            <div class="service-content text-center p-4 rounded">
+                                <h5 class="text-light">Conozca y disfrute nuestra linea de yogures,mermelas y demás productos que tenemos para ti!!!</h5>
+                                <h3 class="mb-0 text-light">Disfruta de esta agradable experiencia para el paladar</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="service-item rounded border border-primary">
+                        <img src="./assets/images/newyorgurt.jpg" class="img-fluid rounded-top w-100" alt="Exotic Vegetable">
+                        <div class="px-4 rounded-bottom">
+                            <div class="service-content text-center p-4 rounded">
+                                <h5 class="text-light">Nueva linea de yogures con sabores exóticos</h5>
+                                <h3 class="mb-0 text-light">Con el autentico sabor natural</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+  <!-- Vesitable Shop Start-->
+  <div class="container-fluid vesitable py-5">
+    <div class="container py-5">
+      <h1 class="mb-5 display-3 text-warning">Disfrute nuestra linea de Yogures Naturales </h1>
+        <div class="owl-carousel vegetable-carousel justify-content-center">
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="/assets/yogures/yfresa.jpg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-success px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Fresa</div>
+                <div class="p-4 rounded-bottom text-danger">
+                    <h4>Yogurt Natural</h4>
+                    <p>Mejora la digestion - Aporta Calcio y Potacio - Bajo en calorias</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">S/.10</p>
+                        <a #navaction routerLink="auth" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="/assets/yogures/yarandano.jpg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-success px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Arandano</div>
+                <div class="p-4 rounded-bottom text-danger">
+                    <h4>Yogurt Natural</h4>
+                    <p>Disminuye la presion alta - Favorece el aspecto de la piel </p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">S/.10</p>
+                        <a #navaction routerLink="auth" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="/assets/yogures/yaguaymanto.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
+                </div>
+                <div class="text-white bg-success px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Aguaymanto</div>
+                <div class="p-4 rounded-bottom text-danger">
+                    <h4>Yogurt Natural</h4>
+                    <p>Aporta Selenio,Zinc y Magnecio - Aporta Calcio y Potacio</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">S/.10</p>
+                        <a #navaction routerLink="auth" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="/assets/yogures/yazucar.jpg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-success px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">C/n Azúcar</div>
+                <div class="p-4 rounded-bottom text-danger">
+                    <h4>Yogurt Natural</h4>
+                    <p>Mejora la digestion - Aporta Calcio y Potacio - Bajo en calorias</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">S/.7</p>
+                        <a #navaction routerLink="auth" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="/assets/yogures/ynatural.jpg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-success px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">S/n Azúcar</div>
+                <div class="p-4 rounded-bottom text-danger">
+                    <h4>Yogurt Natural</h4>
+                    <p>Mejora la digestion - Aporta Calcio y Potacio - Bajo en calorias</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">S/.7</p>
+                        <a #navaction routerLink="auth" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Vesitable Shop End -->
+<!-- Vesitable Shop End -->
+
+
+  <app-footer-landing></app-footer-landing>
+</div>

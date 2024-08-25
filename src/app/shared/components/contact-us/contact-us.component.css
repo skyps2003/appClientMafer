@@ -1,0 +1,62 @@
+.contact-us-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .image-section {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .contact-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .contact-details {
+    flex: 1;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .form-section {
+    margin-top: 20px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    background-color: #ffdd00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #e0c200;
+  }
+  

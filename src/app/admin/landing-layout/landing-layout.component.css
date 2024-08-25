@@ -1,0 +1,167 @@
+.containeer-fluid.py-5 {
+    background-image: url('../../../../public/assets/images/agroindustria.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
+    padding: 5rem 0; /* Espaciado superior e inferior de 5rem, correspondiente a 'py-5' */
+    color: var(--bs-white); /* Color de texto blanco para contrastar con el fondo */
+}
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.btn.border-secondary {
+    transition: 0.5s;
+}
+
+.btn.border-secondary:hover {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+}
+/*** Footer Start ***/
+.footer .footer-item .btn-link {
+    line-height: 35px;
+    color: rgba(255, 255, 255, .5);
+    transition: 0.5s;
+}
+
+.footer .footer-item .btn-link:hover {
+    color: var(--bs-secondary) !important;
+}
+
+.footer .footer-item p.mb-4 {
+    line-height: 35px;
+}
+/*** Footer End ***/
+
+
+
+/* General container styles for the carousel */
+.vesitable {
+    position: relative;
+    width: 100%;
+}
+
+.vesitable .owl-carousel {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for each carousel item */
+.vesitable-item {
+    margin: 0 10px; /* Space between items */
+    width: 100%; /* Ensures that each item takes up full width */
+    max-width: 300px; /* Set a max width for items */
+    background-color: #fff; /* White background for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for card */
+    overflow: hidden; /* Hide any overflow */
+    transition: transform 0.3s ease-in-out; /* Smooth transform for scaling effect */
+}
+
+/* Style for the image container */
+.vesitable-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style for the tag in the top-right corner */
+.text-white.bg-primary {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Style for the card's bottom section */
+.p-4.rounded-bottom {
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+/* Hover effect for the carousel item */
+.vesitable-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+}
+
+/* Carousel navigation arrows (if needed) */
+.owl-nav .owl-prev, .owl-nav .owl-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 36px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust the styling of the carousel dots */
+.owl-dots .owl-dot {
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.owl-dots .owl-dot.active {
+    background-color: #007bff; /* Change active dot color */
+}
+
+.service-item {
+    background-color: #f8f9fa; /* Fondo de las tarjetas */
+    width: 100%; /* Asegura que la tarjeta use el ancho completo del contenedor */
+    max-width: 350px; /* Establece un ancho máximo para las tarjetas */
+    margin: 0 auto; /* Centra las tarjetas en su contenedor */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.service-item img {
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen sin distorsión */
+}
+
+.service-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el texto */
+}
+
+@media (max-width: 576px) {
+    .service-item {
+        max-width: 100%; /* Permite que las tarjetas se ajusten al ancho del contenedor en pantallas pequeñas */
+    }
+}

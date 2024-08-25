@@ -1,0 +1,60 @@
+@if(isLoading) {
+  <app-loader></app-loader>
+}
+@if(!isLoading) {
+  <div class="container mx-auto p-4">
+      <div class="tab-class text-center mb-4">
+          <div class="row g-4 align-items-center">
+              <div class="col-lg-4 text-start">
+                <h1 class="mb-5 display-3 text-danger">Selecciona tu categoria preferida</h1>
+              </div>
+              <div class="col-lg-8 text-end">
+                  <ul class="nav nav-pills d-inline-flex text-center">
+                      <li class="nav-item " *ngFor="let category of categories">
+                          <a
+                              class="d-flex m-2 py-2 bg-danger-subtle rounded-pill"
+                              [class.active]="selectedCategory === category.name.toLowerCase()"
+                              (click)="filterProductsByCategory(category.name.toLowerCase())"
+                              href="javascript:void(0)"
+                          >
+                              <span class="text-success" style="width: 130px;">{{ category.name }}</span>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a
+                              class="d-flex m-2 py-2 bg-light rounded-pill"
+                              [class.active]="selectedCategory === 'all'"
+                              (click)="filterProductsByCategory('all')"
+                              href="javascript:void(0)"
+                          >
+                              <span class="text-dark" style="width: 130px;">Todos los productos</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-8 gap-4">
+          <div class="md:col-span-8 p-4">
+              <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  @for (product of filteredProducts; track $index) {
+                      <app-card
+                          [inventory]="product.id"
+                          [image]="product.product.img"
+                          [price]="product.product.price"
+                          [name]="product.product.name"
+                          [description]="product.product.description"
+                          [stock]="product.stock"
+                          (openModal)="openModal(product)"
+                      ></app-card>
+                  }
+              </div>
+          </div>
+      </div>
+
+      @if (selectedProduct) {
+          <app-product-modal [product]="selectedProduct" (close)="closeModal()"></app-product-modal>
+      }
+  </div>
+}

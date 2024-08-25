@@ -1,0 +1,57 @@
+
+
+<nav #header id="header" class="fixed w-full z-30 top-0 text-white bg-success-subtle"><div class="d-flex justify-content-between">
+  <div class="top-info ps-2 bg-warning">
+      <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-dark">Victor Acosta Rios 1ra Etapa, Tamburco - Abancay</a></small>
+      <small class="me-3">
+        <i class="fas fa-envelope me-2 text-secondary"></i>
+        <a href="mailto:agroindustriasmafer@gmail.com" class="text-dark">agroindustriasmafergmail.com</a>
+    </small>
+    
+  </div>
+  <div class="top-link pe-2 bg-warning ">
+      <a routerLink="/shipping-policies" class="text-dark"><small class="text-dark mx-2">Terminos y Politicas de Envio</small>/</a>
+      <a routerLink="/usage-policies" class="text-dark"><small class="text-dark mx-2">Terminos y condiciones de uso</small>/</a>
+     
+  </div>
+  <div class="collapse navbar-collapse bg-danger" id="navbarCollapse">
+    
+</div>
+</div>
+    <div class="w-full container-fluid mx-auto flex flex-wrap items-center  justify-between mt-0 py-2">
+      <div class=" flex items-center">
+        <a id="brandname" class="toggleColour flex pl-2 items-center gap-3 text-white no-underline hover:no-underline font-bold" href="#">
+          <!--Icon from: http://www.potlabicons.com/ -->
+          <img src="./assets/images/logo.png" alt="" class="w-16">
+          <span class="text-xl text-red-400">
+            {{ company.name }}
+          </span>
+        </a>
+      </div>
+      <div class="justify-end flex items-center w-auto mt-2 lg:mt-0 bg-white bg-transparent text-black p-0 z-20">
+     
+        <button  #navaction routerLink=""  class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full lg:mt-0 py-2 px-8 shadow opacity-75  focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Inicio</button>
+        <button  #navaction routerLink="auth" 
+        class="font-semibold font-mono text-lg hover:bg-black hover:text-white rounded-lg py-2 px-3 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        Catálogo
+      </button>
+      <button #navaction routerLink="auth"
+      class="font-semibold font-mono text-lg hover:bg-black hover:text-white rounded-lg py-2 px-3 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Carrito</button>
+      <button #navaction routerLink="auth" 
+      class="font-semibold font-mono text-lg hover:bg-black hover:text-white rounded-lg py-2 px-3 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Perfil</button>
+        
+      <a routerLink="/contact" class="nav-item nav-link">Contactanos</a>
+
+    </div>
+      <div #navcontent id="nav-content" class=" justify-end flex items-center w-auto mt-2 lg:mt-0 bg-white bg-transparent text-black p-0 z-20">
+        <div class="flex justify-between items-center gap-4 px-3">
+          <button #navaction routerLink="auth" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full lg:mt-0 py-2 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            Login
+          </button>
+          <button routerLink="auth/register" class="font-semibold font-mono text-lg hover:underline hover:text-white hover:bg-gradient rounded-lg py-2 px-3 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Registrarse</button>
+        </div>
+      </div>
+    </div>
+    <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+  </nav>
+  
