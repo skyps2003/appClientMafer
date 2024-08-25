@@ -7,7 +7,8 @@ import { RouterLink } from '@angular/router';
   selector: 'app-header-landing',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './header-landing.component.html'
+  templateUrl: './header-landing.component.html',
+  styleUrls: ['./header-landing.component.css']
 })
 export class HeaderLandingComponent {
   @ViewChild('header', { static: true }) header!: ElementRef;

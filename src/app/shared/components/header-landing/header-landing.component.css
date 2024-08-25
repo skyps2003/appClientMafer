@@ -1,0 +1,137 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #81C408;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+}
+.logo img {
+    max-height: 70px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+nav ul li a:hover {
+    background-color: #568205;
+    border-radius: 4px;
+}
+
+/* Estilo para el botón en el extremo superior derecho */
+.btn-top-right {
+    position: absolute; /* Posicionamiento absoluto para colocar el botón en un lugar específico */
+    top: 1rem; /* Ajusta la distancia desde el borde superior del contenedor */
+    right: 1rem; /* Ajusta la distancia desde el borde derecho del contenedor */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #4a5568; /* Texto gris oscuro */
+    font-weight: 700; /* Negrita */
+    border-radius: 9999px; /* Bordes redondeados completos */
+    padding: 0.5rem 2rem; /* Espaciado interno (padding) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    opacity: 0.75; /* Opacidad */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    text-decoration: none; /* Sin subrayado */
+    text-align: center; /* Centrado del texto */
+    font-size: 1rem; /* Tamaño de fuente */
+    z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
+  }
+  
+  /* Efecto al pasar el cursor (hover) */
+  .btn-top-right:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+    background-color: #f7fafc; /* Fondo ligeramente gris para hover */
+    color: #2d3748; /* Color de texto gris oscuro */
+    transform: scale(1.05); /* Aumento del tamaño */
+    opacity: 1; /* Opacidad completa */
+  }
+  
+  /* Efecto de enfoque (focus) */
+  .btn-top-right:focus {
+    outline: none; /* Sin borde de enfoque predeterminado */
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* Sombra de enfoque */
+  }
+  
+  
+/*** Navbar Start ***/
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.navbar {
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-primary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    border-radius: 10px !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+#searchModal .modal-content {
+    background: rgba(255, 255, 255, .8);
+}
+/*** Navbar End ***/

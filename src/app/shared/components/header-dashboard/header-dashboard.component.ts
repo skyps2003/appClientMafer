@@ -4,11 +4,11 @@ import { CompanyService } from '../../../core/services/api/company.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCartShopping, faPerson } from '@fortawesome/free-solid-svg-icons';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-
+import {FooterLandingComponent} from '../footer-landing/footer-landing.component';
 @Component({
   selector: 'app-header-dashboard',
   standalone: true,
-  imports: [FontAwesomeModule, RouterLink, RouterLinkActive],
+  imports: [FontAwesomeModule, RouterLink, RouterLinkActive,FooterLandingComponent],
   templateUrl: './header-dashboard.component.html'
 })
 export class HeaderDashboardComponent {
