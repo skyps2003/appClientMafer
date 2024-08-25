@@ -1,3 +1,4 @@
+import { PaymentHeaderComponent } from './../../shared/components/payment-header/payment-header.component';
 import { Component, inject } from '@angular/core';
 import { Cart } from '../../core/models/cart';
 import { CartService } from '../../core/services/cart.service';
@@ -12,11 +13,12 @@ import { Sale } from '../../core/models/interfaces/api/sale';
 import { NotifyService } from '../../core/interceptors/notify.service';
 import { Router } from '@angular/router';
 import { forkJoin } from 'rxjs';
+import { PaymentFormComponentComponent } from '../../shared/components/payment-form-component/payment-form-component.component';
 
 @Component({
   selector: 'app-shopping',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, PaymentFormComponentComponent, PaymentHeaderComponent],
   templateUrl: './shopping.component.html'
 })
 export class ShoppingComponent {
@@ -39,7 +41,6 @@ export class ShoppingComponent {
   ngOnInit(): void {
     this.cartService.cartItems$.subscribe(items => {
       this.cartItems = items;
-      console.log(items)
       this.calculateTotal();
     });
     this.getPayments()
